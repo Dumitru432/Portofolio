@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(125, 184, 217);
+}
+
+.home-page {
+    display: flex;
+}
+
+.navbar {
+    height: 100vh;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(205, 218, 245);
+    border-radius: 0 20px 20px 0;
+    
+}
+
+
+.navbar .lists li {
+   background-color: rgb(125, 184, 217);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: none;
+   border-radius: 20px;
+   height: 45px;
+   width: 100px;
+   box-shadow: 8px 7px 7px rgb(125, 184, 217);
+   transition: 0.5s ease-in-out;
+
+}
+
+.navbar .lists li:hover {
+    background-color: yellow;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   border: none;
+   border-radius: 20px;
+   height: 65px;
+   width: 120px;
+   box-shadow: 8px 7px 7px rgb(125, 184, 217);
+  
+}
+
+
+.lists {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+
+.lists a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Rubik Iso';
+}
+
+.about {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#name {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 35px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold; 
+  text-align: center;
+  font-family: 'Rubik Iso';
+}
+
+.lists-media {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.lists-media li {
+    display: inline-block; /* Așează elementele lângă ele */
+    margin: 10px; /* Spațiere între elemente */
+}
+
+.lists-media img {
+    width: 30px; /* Ajustează dimensiunea imaginilor la preferințele tale */
+    height: 30px;
+    transition: transform 0.9s ease; /* Efect de tranziție pentru transformare */
+}
+
+.lists-media img:hover {
+    transform: rotate(360deg); /* Rotire cu 360 de grade */
+    box-shadow: 3px 3px 2px rgb(116, 106, 106);
+}
+
+/* de aici incepe partea de animatie  */
+.about-profesion p {
+    font-family: 'Rubik Iso', cursive;
+    font-size: 35px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold; 
+    opacity: 0; /* Inițial, paragraful este invizibil */
+    transform: translateY(20px); /* Inițial, paragraful este poziționat mai jos */
+    animation: revealAnimation 7s infinite; /* Aplică animația la interval de 5 secunde și în buclă infinită */
+}
+
+@keyframes revealAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.image-person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.image-person img {
+    width: 500px;
+    height: 500px;
+    border-radius: 15%;
+    opacity: .6;
+    padding-right: 13px;
+    transition: opacity 0.9s ease;
+}
+
+.image-person img:hover {
+    opacity: 1;
+}
